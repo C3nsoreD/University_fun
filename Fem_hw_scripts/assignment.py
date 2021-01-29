@@ -83,8 +83,8 @@ ft2x = Ft2*(_c(beta))
 ft2y = Ft2*(_s(beta))
 
 # Individual force vectors for each beam element 
-Forces_1 = [[-Ft1], [0], [Ft1], [0]]
-Forces_2 = [[-ft2x], [ft2y], [ft2x], [-ft2y]]
+Forces_1 = [[Ft1], [0], [-Ft1], [0]]
+Forces_2 = [[-ft2x], [-ft2y], [ft2x], [ft2y]]
 
 # Total force vectors
 total_f = [Forces_1[0], Forces_1[1], Forces_2[0], Forces_2[1], [Forces_1[2][0]+Forces_2[2][0]], Forces_2[3]]
@@ -139,6 +139,7 @@ _e2 = (-q5*c2)/length2 - alpha2*deltaT
 sigma2 = _e2 * E2
 N2 = sigma2 * A2
 
+print()
 print("####### Problem 2")
 print(f"displacement for p2: {q5}")
 
@@ -154,6 +155,8 @@ print(
 	f"e2:{_e2} sigma 2 {sigma2} N2:{N2}"
 )
 print()
+print()
+
 
 
 print("#### Problem 1")
@@ -169,6 +172,7 @@ print(np.asmatrix(total_f))
 
 print()
 print(f"Displacements {[float(i) for i in node_3.round(3)]}")
+print()
 
 # print(
 # 	"The resulting stress for part a: \n"
