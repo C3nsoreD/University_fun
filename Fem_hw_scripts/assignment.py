@@ -117,7 +117,8 @@ q5 = total_f[2]/_x_2
 _q_total = [[0], [0], [0], [0], q5, [0]]
 _zz = np.matmul(_global, _q_total)
 
-print(np.asmatrix(_global).round(4))
+# print(np.asmatrix(_global).round(4))
+print(f"_zz {np.asmatrix(_zz).round(2)}")
 
 _r1 = _zz[0] - total_f[0]
 _r2 = _zz[1] - total_f[1]
